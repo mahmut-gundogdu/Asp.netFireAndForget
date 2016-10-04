@@ -1,2 +1,4 @@
 # Asp.netFireAndForget
-Asp.net ile Background task için bir örnek. asp.net 4.5.2 ve sonrası gereklidir. Çünki örnekte HostingEnvironment.QueueBackgroundWorkItem  kullanılmıştır.
+Asp.net ile Background task için bir örnek. asp.net 4.5.2 ve sonrası gereklidir. Çünkü örnekte HostingEnvironment.QueueBackgroundWorkItem  kullanılmıştır.
+
+Asp.net kullanırken Mail atma, Log Dosyalarını temizleme gibi bazı işlemler için asenkron çalışmak isteyebiliriz. bu işlemler response ile ilgili ise Async Await kullanmamıs yerindedir. Ancak bazen UI sonucu etkilemez ve beklemek zorunda değildir. Bu tür durumlarda Hangfire.io gibi task manager kullanabiliriz. Ancak ihtiyacımız ufak ve zamanlanmıs görev gerektirmiyorsa  HostingEnvironment.QueueBackgroundWorkItem da kullanabiliriz. Asp.net LifeCycle BackgroundworkItem in bitti demesini bekliyor.Yani timeout da yaşanmıyor. Sadece hatayı ui de fırlatmıyor. Onu ayrıca loglamak gereklidir. Ben bu örnek uygulamada random sayıları .txt file yazan bir prosess in çalıştırılmasını uyguladım. Unutmayım ve Örnek olsun diye. 
